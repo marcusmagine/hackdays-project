@@ -1,91 +1,33 @@
-# Hackdays Mobile App
+# Movie Segmenter
 
-A React Native mobile application created during hackdays.
+This project segments movies into smaller episodes based on scene changes and audio analysis.
 
-## Getting Started
+## Setup
 
-### Prerequisites
-
-- Node.js >= 14
-- npm or yarn
-- React Native CLI
-- Xcode (for iOS development)
-- Android Studio (for Android development)
-
-### Installation
-
-1. Clone the repository:
+1. Create a virtual environment (recommended):
 ```bash
-git clone https://github.com/marcusmagine/hackdays-project.git
-cd hackdays-project
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
 ```
 
 2. Install dependencies:
 ```bash
-npm install
-# or
-yarn install
+pip install -r requirements.txt
 ```
 
-3. Start the Metro bundler:
+## Usage
+
+1. Place your video file in the project directory
+2. Update the `video_path` in `movie_segmenter.py` to point to your video file
+3. Run the script:
 ```bash
-npm start
-# or
-yarn start
+python movie_segmenter.py
 ```
 
-4. Run the application:
+The segmented videos will be saved in the `segments` directory.
 
-For iOS:
-```bash
-npm run ios
-# or
-yarn ios
-```
+## Parameters
 
-For Android:
-```bash
-npm run android
-# or
-yarn android
-```
-
-## Project Structure
-
-```
-src/
-├── assets/         # Images, fonts, etc.
-├── components/     # Reusable components
-├── navigation/     # Navigation configurations
-├── screens/        # Screen components
-├── services/       # API calls, external services
-├── store/          # State management
-├── theme/          # Theme configurations
-└── utils/          # Utility functions
-```
-
-## Tech Stack
-
-- React Native
-- TypeScript
-- React Navigation
-- React Native Paper (UI components)
-- Async Storage
-- React Query
-
-## Development
-
-- Run tests: `npm test`
-- Lint: `npm run lint`
-- Format code: `npm run format`
-
-## Contributing
-
-1. Create a feature branch
-2. Commit your changes
-3. Push to the branch
-4. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+You can modify these parameters in the script:
+- `target_segment_duration`: Target duration for each segment (default: 120 seconds)
+- Scene change threshold: Adjust the threshold value (default: 30) in `analyze_scene_changes()`

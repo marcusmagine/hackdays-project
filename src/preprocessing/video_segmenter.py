@@ -97,6 +97,6 @@ def segment_video(video_path, output_dir, threshold=30.0, min_duration=45, max_d
     print(f"Timestamps saved to {timestamps_file}")
 
 if __name__ == "__main__":
-    video_path = "test_data/tears_of_steel_720p.mov"
-    output_dir = "test_data/segments"
+    video_path = "data/input/tears_of_steel_720p.mov"
+    output_dir = "data/segments/tears_of_steel"
     segment_video(video_path, output_dir)
