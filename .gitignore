@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+venv_py311/
+
+# Logs
+*.log
+
+# Test data
+test_data/
+
+# macOS
+.DS_Store
