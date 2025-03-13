@@ -1,4 +1,5 @@
 scenedetect
 opencv-python
-requests>=2.31.0
-python-dotenv>=1.0.0
+requests>=2.25.1
+python-dotenv>=0.15.0
+pathlib>=1.0.1
